@@ -1,0 +1,2 @@
+# Shared PHP includes are not meant to be opened directly
+Require all denied

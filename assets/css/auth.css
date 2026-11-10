@@ -1,0 +1,150 @@
+/* =====================================================
+   Landing / login / register pages (Bootstrap 5 based)
+   ===================================================== */
+.auth-body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1e1b4b 0%, #1e3a8a 30%, #2563eb 60%, #06b6d4 100%);
+  background-size: 300% 300%;
+  background-attachment: fixed;
+  animation: gradientShift 18s ease infinite;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Soft glowing shapes behind the content */
+.auth-body::before,
+.auth-body::after {
+  content: "";
+  position: fixed;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: .45;
+  z-index: 0;
+  pointer-events: none;
+}
+.auth-body::before { width: 420px; height: 420px; background: #a855f7; top: -120px; left: -120px; }
+.auth-body::after  { width: 380px; height: 380px; background: #22d3ee; bottom: -120px; right: -100px; }
+
+@keyframes gradientShift {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .auth-body { animation: none; }
+}
+
+.auth-page { position: relative; z-index: 1; min-height: 100vh; }
+
+/* Hero (left side of the landing page) */
+.hero-title { font-weight: 800; line-height: 1.15; letter-spacing: -.02em; }
+.hero-badge {
+  background: rgba(255, 255, 255, .15);
+  border: 1px solid rgba(255, 255, 255, .25);
+  backdrop-filter: blur(6px);
+}
+.feature-icon {
+  width: 48px; height: 48px; flex: 0 0 48px;
+  display: inline-flex; align-items: center; justify-content: center;
+  border-radius: 14px; font-size: 1.35rem;
+  background: rgba(255, 255, 255, .15);
+  border: 1px solid rgba(255, 255, 255, .25);
+}
+.text-white-75 { color: rgba(255, 255, 255, .78); }
+
+/* Card */
+.auth-card {
+  border-radius: 1.25rem;
+  background: rgba(255, 255, 255, .96);
+  backdrop-filter: blur(10px);
+}
+.auth-logo {
+  width: 64px; height: 64px;
+  display: inline-flex; align-items: center; justify-content: center;
+  border-radius: 18px; font-size: 1.9rem; color: #fff;
+  background: linear-gradient(135deg, #2563eb, #06b6d4);
+  box-shadow: 0 8px 20px rgba(37, 99, 235, .35);
+}
+
+/* Role switch (Customer / Admin) */
+.role-switch { background: #f1f5f9; border-radius: .75rem; padding: .3rem; }
+.role-switch .nav-link { border-radius: .55rem; color: #64748b; font-weight: 600; }
+.role-switch .nav-link.active { background: #fff; color: #1d4ed8; box-shadow: 0 1px 4px rgba(0, 0, 0, .1); }
+
+.input-group-text { background: #f8fafc; color: #64748b; }
+.form-control:focus { box-shadow: 0 0 0 .2rem rgba(37, 99, 235, .2); }
+
+.btn-gradient {
+  color: #fff; border: 0; font-weight: 600;
+  background: linear-gradient(135deg, #1d4ed8, #0891b2);
+}
+.btn-gradient:hover, .btn-gradient:focus { color: #fff; filter: brightness(1.1); }
+
+/* show_flash() uses "error"; map it to Bootstrap's danger colours */
+.alert-error {
+  --bs-alert-color: var(--bs-danger-text-emphasis);
+  --bs-alert-bg: var(--bs-danger-bg-subtle);
+  --bs-alert-border-color: var(--bs-danger-border-subtle);
+}
+.alert-info { word-break: break-all; }
+
+/* =====================================================
+   Landing page: terminal picture behind a gradient
+   ===================================================== */
+.landing-bg {
+  position: fixed; inset: 0; z-index: 0;
+  background-size: cover;
+  background-position: center 60%;   /* keeps the buses in the middle of the screen */
+  opacity: .7;
+  filter: blur(1.5px) saturate(1.15); /* softens the upscaled photo */
+  transform: scale(1.04);
+  animation: slowZoom 30s ease-in-out infinite alternate;
+}
+.landing-overlay {
+  position: fixed; inset: 0; z-index: 0;
+  background:
+    linear-gradient(100deg, rgba(15, 23, 42, .9) 0%, rgba(30, 58, 138, .72) 40%, rgba(37, 99, 235, .4) 72%, rgba(250, 204, 21, .25) 100%),
+    linear-gradient(0deg, rgba(15, 23, 42, .7) 0%, rgba(15, 23, 42, 0) 35%),
+    linear-gradient(180deg, rgba(15, 23, 42, .55) 0%, rgba(15, 23, 42, 0) 25%);
+}
+@keyframes slowZoom { from { transform: scale(1.04); } to { transform: scale(1.12); } }
+@media (prefers-reduced-motion: reduce) { .landing-bg { animation: none; } }
+
+.landing-top, .landing-page, .landing-foot { z-index: 1; }
+.landing-page { min-height: calc(100vh - 136px); }
+.landing-foot { color: rgba(255, 255, 255, .7); }
+
+.brand-icon {
+  width: 38px; height: 38px;
+  display: inline-flex; align-items: center; justify-content: center;
+  border-radius: 11px; color: #1e293b;
+  background: linear-gradient(135deg, #fde047, #f59e0b);
+  box-shadow: 0 4px 14px rgba(250, 204, 21, .4);
+}
+
+/* Live stat pills */
+.stat-pill {
+  display: flex; align-items: center; gap: .75rem;
+  padding: .6rem 1.1rem .6rem .8rem;
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, .12);
+  border: 1px solid rgba(255, 255, 255, .22);
+  backdrop-filter: blur(8px);
+}
+.stat-pill > .bi { font-size: 1.5rem; color: #facc15; }
+.stat-pill strong { display: block; font-size: 1.35rem; line-height: 1.1; }
+.stat-pill span { font-size: .78rem; color: rgba(255, 255, 255, .75); text-transform: uppercase; letter-spacing: .04em; }
+
+.feature-icon { color: #facc15; }
+
+/* Trust chips under the login card */
+.trust-chip {
+  display: inline-flex; align-items: center; gap: .35rem;
+  padding: .2rem .55rem; border-radius: 999px; font-size: .78rem;
+  background: #f1f5f9; border: 1px solid #e2e8f0;
+}
+.trust-chip .bi { color: #2563eb; }
+
+/* Yellow-bus accent on the main button */
+.landing-page .btn-gradient { background: linear-gradient(135deg, #1d4ed8, #0891b2); }
+.landing-page .auth-logo { background: linear-gradient(135deg, #facc15, #f59e0b); color: #1e293b; box-shadow: 0 8px 20px rgba(245, 158, 11, .4); }

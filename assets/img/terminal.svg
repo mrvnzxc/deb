@@ -1,0 +1,130 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMax slice">
+  <!-- Original illustration: yellow provincial buses parked at a bus terminal at sunrise -->
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0b1d4a"/>
+      <stop offset=".45" stop-color="#1e40af"/>
+      <stop offset=".72" stop-color="#f59e0b"/>
+      <stop offset="1" stop-color="#fb923c"/>
+    </linearGradient>
+    <radialGradient id="sun" cx=".5" cy=".5" r=".5">
+      <stop offset="0" stop-color="#fef3c7"/>
+      <stop offset=".6" stop-color="#fde68a" stop-opacity=".85"/>
+      <stop offset="1" stop-color="#fbbf24" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="yellow" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fde047"/>
+      <stop offset=".55" stop-color="#facc15"/>
+      <stop offset="1" stop-color="#d97706"/>
+    </linearGradient>
+    <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#334e7a"/>
+      <stop offset=".5" stop-color="#14213d"/>
+      <stop offset="1" stop-color="#0b1222"/>
+    </linearGradient>
+    <linearGradient id="road" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#334155"/>
+      <stop offset="1" stop-color="#111827"/>
+    </linearGradient>
+    <pattern id="lit" width="60" height="44" patternUnits="userSpaceOnUse">
+      <rect x="10" y="10" width="38" height="22" rx="3" fill="#fbbf24" opacity=".55"/>
+    </pattern>
+
+    <!-- One bus, side view, facing right (approx. 520 x 210) -->
+    <g id="bus">
+      <ellipse cx="260" cy="206" rx="275" ry="11" fill="#000" opacity=".3"/>
+      <rect x="10" y="8" width="500" height="22" rx="11" fill="#eab308"/>
+      <rect x="0" y="20" width="520" height="150" rx="22" fill="url(#yellow)"/>
+      <!-- livery stripes -->
+      <rect x="0" y="108" width="520" height="14" fill="#dc2626"/>
+      <rect x="0" y="124" width="520" height="5" fill="#1e3a8a"/>
+      <!-- side windows -->
+      <g fill="url(#glass)">
+        <rect x="20"  y="38" width="56" height="54" rx="6"/>
+        <rect x="83"  y="38" width="56" height="54" rx="6"/>
+        <rect x="146" y="38" width="56" height="54" rx="6"/>
+        <rect x="209" y="38" width="56" height="54" rx="6"/>
+        <rect x="272" y="38" width="56" height="54" rx="6"/>
+        <rect x="335" y="38" width="56" height="54" rx="6"/>
+      </g>
+      <g fill="#fff" opacity=".18">
+        <path d="M24 42h22l-18 46h-4z"/><path d="M87 42h22l-18 46h-4z"/><path d="M150 42h22l-18 46h-4z"/>
+        <path d="M213 42h22l-18 46h-4z"/><path d="M276 42h22l-18 46h-4z"/><path d="M339 42h22l-18 46h-4z"/>
+      </g>
+      <!-- door -->
+      <rect x="402" y="38" width="44" height="128" rx="5" fill="url(#glass)"/>
+      <rect x="423" y="38" width="2" height="128" fill="#0b1222"/>
+      <!-- windshield + destination sign -->
+      <path d="M454 38h40q18 0 22 22v40h-62z" fill="url(#glass)"/>
+      <rect x="456" y="24" width="54" height="11" rx="2" fill="#111827"/>
+      <rect x="461" y="27" width="44" height="5" rx="1" fill="#f59e0b"/>
+      <!-- lights + bumper -->
+      <rect x="506" y="134" width="13" height="11" rx="3" fill="#fef9c3"/>
+      <rect x="1" y="128" width="8" height="18" rx="2" fill="#ef4444"/>
+      <rect x="-4" y="158" width="528" height="12" rx="6" fill="#374151"/>
+      <!-- wheels -->
+      <g>
+        <circle cx="112" cy="170" r="35" fill="#1f2937"/>
+        <circle cx="112" cy="170" r="28" fill="#0f172a"/>
+        <circle cx="112" cy="170" r="13" fill="#9ca3af"/>
+        <circle cx="112" cy="170" r="5" fill="#e5e7eb"/>
+        <circle cx="418" cy="170" r="35" fill="#1f2937"/>
+        <circle cx="418" cy="170" r="28" fill="#0f172a"/>
+        <circle cx="418" cy="170" r="13" fill="#9ca3af"/>
+        <circle cx="418" cy="170" r="5" fill="#e5e7eb"/>
+      </g>
+    </g>
+  </defs>
+
+  <!-- Sky, sun and hills -->
+  <rect width="1600" height="900" fill="url(#sky)"/>
+  <circle cx="1240" cy="420" r="170" fill="url(#sun)"/>
+  <path d="M0 520 L180 430 L330 500 L520 380 L720 480 L900 410 L1080 490 L1260 400 L1440 470 L1600 420 V640 H0 Z" fill="#1e3a8a" opacity=".55"/>
+  <path d="M0 570 L220 500 L420 560 L640 480 L860 560 L1100 500 L1320 560 L1600 510 V640 H0 Z" fill="#172554" opacity=".8"/>
+
+  <!-- Terminal scene (shifted down so it sits in the lower part of the screen) -->
+  <g transform="translate(0 100)">
+  <!-- Terminal building -->
+  <rect x="0" y="440" width="1600" height="250" fill="#1e293b"/>
+  <rect x="0" y="470" width="1600" height="120" fill="url(#lit)"/>
+  <path d="M-20 450 L1620 450 L1600 410 L0 410 Z" fill="#334155"/>
+  <rect x="-20" y="446" width="1640" height="10" fill="#0f172a"/>
+  <g fill="#475569">
+    <rect x="70" y="456" width="16" height="236"/><rect x="390" y="456" width="16" height="236"/>
+    <rect x="710" y="456" width="16" height="236"/><rect x="1030" y="456" width="16" height="236"/>
+    <rect x="1350" y="456" width="16" height="236"/>
+  </g>
+  <!-- Pylon sign at the right edge (stays clear of the page text) -->
+  <rect x="1452" y="190" width="14" height="500" fill="#475569"/>
+  <rect x="1418" y="150" width="82" height="300" rx="12" fill="#0f172a" stroke="#facc15" stroke-width="4"/>
+  <circle cx="1459" cy="190" r="22" fill="#facc15"/>
+  <rect x="1447" y="178" width="24" height="20" rx="4" fill="#0f172a"/>
+  <rect x="1450" y="182" width="18" height="7" rx="1" fill="#facc15"/>
+  <circle cx="1452" cy="202" r="3" fill="#0f172a"/><circle cx="1466" cy="202" r="3" fill="#0f172a"/>
+  <g font-family="Segoe UI, Arial, sans-serif" font-size="26" font-weight="800" fill="#facc15" text-anchor="middle">
+    <text x="1459" y="246">B</text><text x="1459" y="276">U</text><text x="1459" y="306">S</text>
+    <text x="1459" y="350" font-size="17">TERM</text><text x="1459" y="372" font-size="17">INAL</text>
+  </g>
+  <rect x="1430" y="392" width="58" height="40" rx="6" fill="#16a34a"/>
+  <text x="1459" y="419" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700" fill="#fff" text-anchor="middle">OPEN</text>
+  <!-- Bay numbers -->
+  <g font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="700" fill="#e2e8f0" text-anchor="middle">
+    <rect x="200" y="462" width="56" height="30" rx="5" fill="#0f172a"/><text x="228" y="484">1</text>
+    <rect x="760" y="462" width="56" height="30" rx="5" fill="#0f172a"/><text x="788" y="484">2</text>
+    <rect x="1320" y="462" width="56" height="30" rx="5" fill="#0f172a"/><text x="1348" y="484" fill="#e2e8f0">3</text>
+  </g>
+
+  <!-- Ground -->
+  <rect x="0" y="690" width="1600" height="310" fill="url(#road)"/>
+  <rect x="0" y="686" width="1600" height="10" fill="#64748b"/>
+  <line x1="0" y1="830" x2="1600" y2="830" stroke="#f8fafc" stroke-width="6" stroke-dasharray="70 50" opacity=".45"/>
+
+  <!-- Parked buses at the bays -->
+  <use xlink:href="#bus" href="#bus" transform="translate(40 490)"/>
+  <use xlink:href="#bus" href="#bus" transform="translate(600 490)"/>
+  <use xlink:href="#bus" href="#bus" transform="translate(1160 490)"/>
+  </g>
+
+  <!-- Bus leaving the terminal (foreground) -->
+  <use xlink:href="#bus" href="#bus" transform="translate(760 680) scale(1.12)"/>
+</svg>
